@@ -33,11 +33,11 @@
                     <div class="col-lg-8">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Laboratory Request Form</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Permission For Operation Form</h1>
                             </div>
                             <form class="user">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Clinical Details</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Patient Details</h6>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -64,74 +64,17 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Hospital Number</label>
-                                        <input type="text" class="form-control" placeholder="Hospital Number">
-                                    </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Lab Number</label>
-                                        <input type="text" class="form-control" placeholder="Lab Number">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Requesting Doctor</label>
-                                        <input type="text" class="form-control" placeholder="Requesting Doctor">
-                                    </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Ward/Clinic</label>
-                                        <input type="text" class="form-control" placeholder="Ward/Clinic">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                     <label>Provisional Diagnosis</label>
-                                    <input type="text" class="form-control"
-                                        placeholder="Relevant Clinical Information">
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Specimen</label>
-                                        <input type="text" class="form-control" placeholder="Specimen">
-                                    </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Investigation Request</label>
-                                        <input type="text" class="form-control" placeholder="Investigation Request">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Date Received</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Time Received</label>
-                                        <input type="time" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Date Of Assay</label>
-                                        <input type="date" class="form-control">
-                                    </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label>Time Of Assay</label>
-                                        <input type="time" class="form-control">
-                                    </div>
-                                </div>
+                                
 
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Sample Details</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Upload Witness  Authorization Form</h6>
                                 </div>
                                 <div class="form-group row">
                                   <input type="hidden" name="count" value="1" />
                                   <div class="col-sm-8 mb-3 mb-sm-0" id="fields">
-                                          <label>Laboratory Test</label>
-                                          <select class="form-control" autocomplete="off" id="field1" name="test" data-items="8">
-                                              <option value="Haematology">Haematology</option>
-                                              <option value="Chemical Pathology">Chemical Pathology</option>
-                                          </select>
-                                          <button id="b1" class="btn btn add-more" type="button"><i class="fas fa-plus-circle"></i></button>&nbsp;<small>Press + to add another test </small>
+                                          <label>Authorization Form</label>
+                                          <input type="file" class="form-control" autocomplete="off" id="field1" name="witness" data-items="8">
+                                          <button id="b1" class="btn btn add-more" type="button"><i class="fas fa-plus-circle"></i></button>&nbsp;<small>Press + to add another witness  </small>
                                   </div>
                                   
                                   
@@ -170,7 +113,7 @@ $(document).ready(function(){
         var addRemove = "#field" + (next);
         next = next + 1;
         
-        var newIn = '<select class="form-control" autocomplete="off" id="field' + next + '" name="test' + next + '"><option value="Haematology">Haematology</option><option value="Chemical Pathology">Chemical Pathology</option></select>';
+        var newIn='<input type="file" class="form-control" autocomplete="off" id="field' + next + '" name="witness' + next + '">';
 
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" ><i class="fas fa-trash-alt"></i></button></div><div id="field">';
